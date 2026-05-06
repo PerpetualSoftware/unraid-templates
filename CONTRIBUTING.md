@@ -19,14 +19,34 @@ Notes for **maintainers** adding or updating templates in this repo. End-user in
 
 ## Icon source-of-truth
 
-Pipeline:
+There are two distinct icons in this repo:
+
+- **Vendor icon** at `/icon.png` — referenced by `ca_profile.xml`'s `<Icon>`. This is the **Perpetual Software company mark**, fetched from `https://perpetualsoftware.org/icon_transparent.png` (the favicon/header logo on perpetualsoftware.org). When the brand changes there, regenerate this file.
+- **Per-app icon** at `<app>/icon.png` — referenced by `<app>/<app>.xml`'s `<Icon>`. This is the **product mark** (e.g. Pad's icon for `pad/icon.png`). The source-of-truth lives in the product's own repo (e.g. [`PerpetualSoftware/pad`](https://github.com/PerpetualSoftware/pad)'s `web/static/icon-512.png` for Pad).
+
+### Square-source pipeline (per-app icons typically)
 
 ```bash
 python3 -c "from PIL import Image; \
   Image.open('<source>.png').resize((256, 256), Image.LANCZOS).save('<app>/icon.png', 'PNG', optimize=True)"
 ```
 
-For Pad specifically the source is [`PerpetualSoftware/pad`](https://github.com/PerpetualSoftware/pad)'s `web/static/icon-512.png`. When the brand mark changes there, regenerate the per-app icon AND the vendor icon (`/icon.png` at this repo's root).
+### Non-square source pipeline (vendor icon, sometimes per-app)
+
+If the source isn't square, scale-to-fit and pad with transparency so CA's listing tile renders correctly:
+
+```python
+from PIL import Image
+src = Image.open('<source>.png').convert('RGBA')
+target = 256
+scale = target / max(src.size)
+resized = src.resize((int(src.width * scale), int(src.height * scale)), Image.LANCZOS)
+canvas = Image.new('RGBA', (target, target), (0, 0, 0, 0))
+canvas.paste(resized, ((target - resized.width) // 2, (target - resized.height) // 2), resized)
+canvas.save('icon.png', 'PNG', optimize=True)
+```
+
+The vendor icon was generated this way from the 549x367 source.
 
 ## dockerMan SAVE format conformity
 
