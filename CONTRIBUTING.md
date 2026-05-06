@@ -90,7 +90,12 @@ Schema (fields used in this repo plus optional ones for reference):
 <Maintainer>
   <Icon>https://raw.githubusercontent.com/PerpetualSoftware/unraid-templates/main/icon.png</Icon>
   <Profile>
-    <!-- REQUIRED, non-empty. Multi-line OK. Describes what this repo holds. -->
+    <!-- REQUIRED, non-empty. The CA portal renders this as a single
+         paragraph: ALL whitespace (newlines, indentation, blank lines)
+         collapses. Bullet lists, "Label: URL" structures, and per-app
+         pitches turn into mush. Keep it to 1-2 sentences of pure
+         vendor-level prose; let per-app <Overview> elements carry the
+         product pitches. -->
   </Profile>
   <WebPage>https://perpetualsoftware.org</WebPage>
   <!-- Optional fields documented but not currently used: -->

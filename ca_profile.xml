@@ -2,14 +2,7 @@
 <Maintainer>
   <Icon>https://raw.githubusercontent.com/PerpetualSoftware/unraid-templates/main/icon.png</Icon>
   <Profile>
-    Perpetual Software ships local-first developer tools that respect your data and run on hardware you control.
-
-    Pad is our project tracker for developers and AI coding agents — single Go binary, SQLite by default, MCP-ready (Claude Code, Cursor, Windsurf, Codex). Your data stays on your box, no telemetry, no account required.
-
-    Vendor: https://perpetualsoftware.org
-    Pad source: https://github.com/PerpetualSoftware/pad
-    Pad docs:   https://getpad.dev/docs
-    Issues:     https://github.com/PerpetualSoftware/pad/issues
+    Perpetual Software ships local-first developer tools that respect your data and run on hardware you control. This repository holds our Unraid Community Applications templates.
   </Profile>
   <WebPage>https://perpetualsoftware.org</WebPage>
 </Maintainer>
