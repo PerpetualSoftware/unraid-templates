@@ -92,7 +92,7 @@ Schema (fields used in this repo plus optional ones for reference):
   <Profile>
     <!-- REQUIRED, non-empty. Multi-line OK. Describes what this repo holds. -->
   </Profile>
-  <WebPage>https://getpad.dev</WebPage>
+  <WebPage>https://perpetualsoftware.org</WebPage>
   <!-- Optional fields documented but not currently used: -->
   <!-- <Forum>https://forums.unraid.net/topic/<thread>/</Forum> -->
   <!-- <DonateLink>...</DonateLink> -->
