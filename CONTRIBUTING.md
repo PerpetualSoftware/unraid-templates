@@ -21,7 +21,7 @@ Notes for **maintainers** adding or updating templates in this repo. End-user in
 
 There are two distinct icons in this repo:
 
-- **Vendor icon** at `/icon.png` — referenced by `ca_profile.xml`'s `<Icon>`. This is the **Perpetual Software company mark**, fetched from `https://perpetualsoftware.org/icon_transparent.png` (the favicon/header logo on perpetualsoftware.org). When the brand changes there, regenerate this file.
+- **Vendor icon** at `/icon.png` — referenced by `ca_profile.xml`'s `<Icon>`. This is the **Perpetual Software LLC company mark**, fetched from `https://perpetualsoftware.org/icon_transparent.png` (the favicon/header logo on perpetualsoftware.org). When the brand changes there, regenerate this file.
 - **Per-app icon** at `<app>/icon.png` — referenced by `<app>/<app>.xml`'s `<Icon>`. This is the **product mark** (e.g. Pad's icon for `pad/icon.png`). The source-of-truth lives in the product's own repo (e.g. [`PerpetualSoftware/pad`](https://github.com/PerpetualSoftware/pad)'s `web/static/icon-512.png` for Pad).
 
 ### Square-source pipeline (per-app icons typically)

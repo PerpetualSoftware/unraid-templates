@@ -1,8 +1,8 @@
-# Perpetual Software · Unraid Templates
+# Perpetual Software LLC · Unraid Templates
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 
-Unraid Community Applications templates for Perpetual Software products. Each app lives in its own subdirectory with the template XML, an icon, and an app-specific README.
+Unraid Community Applications templates for Perpetual Software LLC products. Each app lives in its own subdirectory with the template XML, an icon, and an app-specific README.
 
 ## Apps
 
